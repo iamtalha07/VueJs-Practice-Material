@@ -8,7 +8,7 @@
         <app-author :author="author"></app-author>
 
         <br><br>
-        <app-social-sharing @articleWasShared="shared"></app-social-sharing>
+        <app-social-sharing @articleWasShared="shared('Hello World!',$event)"></app-social-sharing>
     </div>
 </template>
 <script>
@@ -28,8 +28,9 @@ export default {
         }
     },
     methods: {
-        shared: function(event) {  // event is the data passing from child component emit
+        shared: function(message, event) {  // event is the data passing from child component emit
             this.shares++,
+            console.log(message)
             console.log(event)
         }
     },
