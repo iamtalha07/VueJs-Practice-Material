@@ -6,10 +6,14 @@
 
         <p class="lead">{{ content }}</p>
         <app-author :author="author"></app-author>
+
+        <br><br>
+        <app-social-sharing @articleWasShared="shared"></app-social-sharing>
     </div>
 </template>
 <script>
 import Author from './Author.vue';
+import Social from './Social.vue';
 export default {
     data() {
         return {
@@ -23,8 +27,15 @@ export default {
             shares: 0,
         }
     },
+    methods: {
+        shared: function(event) {  // event is the data passing from child component emit
+            this.shares++,
+            console.log(event)
+        }
+    },
     components: {
         appAuthor: Author,
+        appSocialSharing: Social,
         }
 }
 </script>
