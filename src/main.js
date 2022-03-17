@@ -8,6 +8,8 @@ import "bootstrap-vue/dist/bootstrap-vue.css"
 
 Vue.use(BootstrapVue)
 
+export const eventBus = new Vue();
+
 Vue.component('announcement',Announcement)
 Vue.component('appArticle',Article)
 

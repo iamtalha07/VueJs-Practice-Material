@@ -3,9 +3,16 @@
 </template>
 
 <script>
+import { eventBus } from './main';
+
 export default {
     methods: {
         share() {
+
+            eventBus.$emit('articleWasShared',{
+                media: 'Facebook'
+            });
+
             // this.$emit('eventName','passingData');
             this.$emit('articleWasShared',{
                 media: 'Facebook'
