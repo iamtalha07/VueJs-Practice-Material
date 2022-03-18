@@ -4,8 +4,11 @@
 
 <script>
 export default {
-    destroyed() {
-        alert('Home destroyed');
+    activated() {
+        alert('Home activated');
+    },
+    deactivated() {
+        alert('Home deactivated');
     }
 }
 </script>

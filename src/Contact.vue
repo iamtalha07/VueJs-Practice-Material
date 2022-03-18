@@ -4,8 +4,11 @@
 
 <script>
 export default {
-        destroyed() {
-        alert('Contact destroyed');
+    activated() {
+        alert('contact activated');
+    },
+    deactivated() {
+        alert('contact deactivated');
     }
 }
 </script>
