@@ -4,6 +4,8 @@
 
 <script>
 export default {
-    
+    destroyed() {
+        alert('About destroyed');
+    }
 }
 </script>

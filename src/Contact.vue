@@ -4,6 +4,8 @@
 
 <script>
 export default {
-    
+        destroyed() {
+        alert('Contact destroyed');
+    }
 }
 </script>
